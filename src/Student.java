@@ -8,6 +8,7 @@ public class Student {
    double avarage;
    boolean isPass;
 
+   //Öğrenci girişi gerekli tanımlamalar yapıldı
    Student(String name,String stuNo, String classes,Course c1, Course c2, Course c3){
        this.name = name;
        this.stuNo = stuNo;
@@ -19,7 +20,7 @@ public class Student {
        this.isPass = false;
 
    }
-
+//Ders notu
    void addBulkExamNote (int note1, int note2, int note3) {
        if (note1 >=0 && note1 <=100){
            c1.note =note1;
@@ -31,6 +32,7 @@ public class Student {
            c3.note = note3;
        }
    }
+   //Sözlü Sınav Notu
     void addBulkVerbal (int verbal1, int verbal2, int verbal3) {
         if (verbal1 >=0 && verbal1 <=100){
             c1.verbal =verbal1;
@@ -42,6 +44,7 @@ public class Student {
             c3.verbal = verbal3;
         }
     }
+    //Geçme Koşulu
    void isPass(){
        System.out.println("*****************");
        this.avarage = (((this.c1.note + this.c2.note + this.c3.note) / 3.0)*0.80) + (((this.c1.verbal + this.c2.verbal + this.c3.verbal)/3)*0.20);
@@ -55,6 +58,7 @@ public class Student {
 
        printNote();
    }
+   //Sistem Çıktı kısmı
    void printNote(){
        System.out.println(this.c1.name + " Notu\t\t\t\t:" + this.c1.note);
        System.out.println(this.c2.name + " Notu\t\t\t\t:" + this.c2.note);

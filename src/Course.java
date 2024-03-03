@@ -6,6 +6,7 @@ public class Course {
     int note;
     int verbal;
 
+    //Dersler için oluşturulan Stringler
     Course(String name, String code, String prefix){
         this.name = name;
         this.code = code;
@@ -13,7 +14,7 @@ public class Course {
         int note = 0;
         int verbal = 0;
     }
-
+    //Öğretmen Ataması ile alakalı koşul
     void addTeacher(Teacher teacher){
        if(teacher.branch.equals(this.prefix)){
            this.teacher = teacher;

@@ -2,7 +2,7 @@ public class Teacher {
     String name;
     String mpno;
     String branch;
-
+//Öğretmen kısmı oluşturulan methot
     Teacher(String name, String branch, String mpno){
         this.name = name;
         this.branch = branch;
